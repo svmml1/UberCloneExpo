@@ -2,14 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import 'react-native-gesture-handler';
+import { store } from './store';
+import { HomeScreen } from './screens/HomeScreen';
 
 export default function App() {
   return (
-    <Provider>
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    
-    </View>
+    <Provider store={store}>
+    <HomeScreen />
     </Provider>
   );
 }
